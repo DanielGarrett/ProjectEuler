@@ -8,7 +8,7 @@ def problem1_iter():
     return sum
 
 def problem1_func():
-    return reduce((lambda x,y: x+y), [x for x in range(1000) if x % 3 == 0 or x % 5 == 0])
+    return sum([x for x in range(1000) if x % 3 == 0 or x % 5 == 0])
 
 
 EulerRunner.solve_problem(problem1_iter)
