@@ -1,11 +1,11 @@
 import EulerRunner
 
 def problem1_iter():
-    sum = 0
+    total = 0
     for x in range(1000):
         if x % 3 == 0 or x % 5 == 0:
-            sum += x
-    return sum
+            total += x
+    return total
 
 def problem1_func():
     return sum([x for x in range(1000) if x % 3 == 0 or x % 5 == 0])
