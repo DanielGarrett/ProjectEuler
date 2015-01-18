@@ -15,6 +15,5 @@ def problem4_iter():
         if max_num > 0:
             return max_num
 
-def problem4_func()
 
 EulerRunner.solve_problem(problem4_iter)
