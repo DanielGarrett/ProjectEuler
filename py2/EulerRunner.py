@@ -33,3 +33,15 @@ def prime_generator():
             primes.append(current)
             yield current
         current += 1
+
+def prime_sieve(max_value):
+    primes_bool = [True for x in range(0, max_value+1)]
+    primes_bool[0] = False
+    primes_bool[1] = False
+    sqrt_max = int(math.ceil(math.sqrt(max_value)))
+    for prime in range(2, sqrt_max + 1):
+        mult = prime ** 2
+        while mult <= max_value:
+            primes_bool[mult] = False
+            mult += prime
+    
