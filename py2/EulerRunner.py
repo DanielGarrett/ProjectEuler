@@ -1,5 +1,6 @@
 #EulerRunner.py
 import datetime
+import math
 def solve_problem(solve_func):
     start = datetime.datetime.now()
     result = str(solve_func())
@@ -44,4 +45,6 @@ def prime_sieve(max_value):
         while mult <= max_value:
             primes_bool[mult] = False
             mult += prime
+    primes = [x for x in range(0, max_value+1) if primes_bool[x]]
+    return primes
     
