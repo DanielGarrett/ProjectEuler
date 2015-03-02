@@ -17,6 +17,14 @@ def fib_generator():
         fib2 = fibtemp
         yield fib2
 
+def triangle_generator():
+    triangle = 0
+    side = 1
+    while True:
+        triangle += side
+        side += 1
+        yield triangle
+
 #not a partularly useful generator (keeps things in memory), but making a memory tradeoff for time
 def prime_generator():
     primes = []

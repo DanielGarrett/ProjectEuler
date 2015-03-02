@@ -31,7 +31,7 @@ def prob8iter():
                 start = end
                 current = 1
             else:
-                current *= int(digits[end])
+                current *= ord(digits[end]) - 48
                 end += 1
                 
         if end >= len(digits):

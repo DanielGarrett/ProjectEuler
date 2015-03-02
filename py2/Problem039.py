@@ -4,13 +4,13 @@ import math
 def problem39iter():
     maxnum = 0
     maxval = 0
-    for p in range(1, 1001):
+    sqr = [x**2 for x in range(1000)]
+    for p in range(12, 1001):
         count = 0
-        for a in range(int(math.floor((p)/3)), 0, -1):
-            asquared = a**2
-            for b in range(a+1,int(math.floor((p-a)/2))):
+        for a in range(1, p/3):
+            for b in range(a+1, ((p-a)/2) + 1):
                 c = p - a - b
-                if asquared + b**2 == c**2:
+                if sqr[a] + sqr[b] == sqr[c]:
                     count += 1
         if count > maxval:
             maxval = count
